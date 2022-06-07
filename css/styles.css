@@ -1,0 +1,159 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+.margenUnRem {
+  margin: 1rem;
+}
+
+.paddingUnRem {
+  padding: 1rem;
+}
+
+body {
+  background-color: #AFDBF5;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: footer;
+}
+
+/* ----------Estilos del html Index---------- */
+.contenedorInicio {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8fr 2fr 1fr;
+  grid-template-areas: "main" "clientes" "footer";
+}
+
+.mainInicio, .nuestrosClientesInicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nuestrosClientesInicio {
+  grid-area: clientes;
+  background-color: #4B9CD3;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logoCliente {
+  height: 2rem;
+  margin: 0.2rem;
+}
+
+/* ----------Estilos del html Nosotros---------- */
+.contenedorNosotros {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: 7fr 1fr;
+  grid-template-areas: "main" "footer";
+}
+
+.imgIngenieroNosotros {
+  width: 98vw;
+}
+
+/* ----------Estilos del html Productos---------- */
+.contenedorProductos {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: 2fr 5fr 2fr;
+  grid-template-areas: "main" "videos" "footer";
+}
+
+.contenedorVideosProductos {
+  grid-area: videos;
+}
+
+.videoProductos {
+  width: 100vw;
+}
+
+/* ----------Estilos del html Servicios---------- */
+.contenedorServicios {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: 7fr 1fr;
+  grid-template-areas: "main" "footer";
+}
+
+/* ----------Estilos del html Contacto---------- */
+.contenedorContacto {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: 5fr 5fr 2fr;
+  grid-template-areas: "contacto" "ubicacion" "footer";
+}
+
+.mapaContacto {
+  width: 100vw;
+  padding: 1rem;
+}
+
+/* ---------------------------------------------Media querie para desktop--------------------------------------------- */
+@media screen and (min-width: 1024px) {
+  /* ----------Estilos del html Index---------- */
+  .logoCliente {
+    height: 4rem;
+    margin: 1rem;
+  }
+  .logoCliente:hover {
+    height: 6rem;
+  }
+  /* ----------Estilos del html Productos---------- */
+  .contenedorProductos {
+    grid-template-columns: 1.2fr 2fr;
+    grid-template-areas: "main videos" "footer footer";
+  }
+  .contenedorVideosProductos {
+    grid-area: videos;
+  }
+  .videoProductos {
+    width: 60vw;
+  }
+  /* ----------Estilos del html Contacto---------- */
+  .contenedorContacto {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7fr 1fr;
+    grid-template-areas: "contacto ubicacion" "footer footer";
+  }
+  .mapaContacto {
+    width: 50vw;
+    height: 50vh;
+  }
+  .mainContacto {
+    grid-area: contacto;
+  }
+  .ubicacionContacto {
+    grid-area: ubicacion;
+  }
+  .consultaContacto {
+    width: 20rem;
+    height: 10rem;
+  }
+  .inputEmailContacto {
+    margin-left: 1.5rem;
+    width: 20rem;
+  }
+  .contenedorContacto .ubicacionContacto h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
