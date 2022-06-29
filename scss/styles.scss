@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 @import "utilities/variables";
 @import "utilities/mixin";
@@ -13,19 +15,31 @@
 .paddingUnRem{
     padding: 1rem;
 }
+header, footer{
+    background-color: $azulIngemet;
+}
+.titulos{
+    font-size: 2rem;
+}
 body{
     background-color: $colorBody;
 }
 footer{
-    @include flex (flex,center,center,center);
+    @include flex (flex,column,center,center,center);
     grid-area: footer;
+}
+h1, h2, p, li, span, legend, label{
+    color: $colorTexto;
+}
+.nav-link{
+    color: $colorTexto;
 }
 /* ----------Estilos del html Index---------- */
 .contenedorInicio{
-    height: 100vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 8fr 2fr 1fr;
+    grid-template-rows: 3.5fr 1fr 5.5rem;
     grid-template-areas: "main"
                          "clientes"
                          "footer";
@@ -35,9 +49,12 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+.imgIngenierosInicio{
+    width: 100%;
+}
 .nuestrosClientesInicio{
     grid-area: clientes;
-    background-color: #4B9CD3;
+    background-color: rgba(37, 70, 141, 0.582);
     @extend .mainInicio;
     justify-content: center;
     gap: 1rem;
@@ -48,22 +65,22 @@ footer{
 }
 /* ----------Estilos del html Nosotros---------- */
 .contenedorNosotros{
-    height: 100vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: 1 fr;
-    grid-template-rows: 7fr 1fr;
+    grid-template-rows: 1fr 5.5rem;
     grid-template-areas: "main"
                          "footer";
 }
 .imgIngenieroNosotros{
-    width: 98vw;
+    width: 100%;
 }
 /* ----------Estilos del html Productos---------- */
 .contenedorProductos{
-    height: 100vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: 1 fr;
-    grid-template-rows: 2fr 5fr 2fr;
+    grid-template-rows: 2fr 5fr 5.5rem;
     grid-template-areas: "main"
                          "videos"
                          "footer";
@@ -72,29 +89,44 @@ footer{
     grid-area: videos;
 }
 .videoProductos{
-    width: 100vw;
+    width: 100%;
+    height: 15rem;
 }
 /* ----------Estilos del html Servicios---------- */
 .contenedorServicios{
-    height: 100vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: 1 fr;
-    grid-template-rows: 7fr 1fr;
+    grid-template-rows: 1fr 5.5rem;
     grid-template-areas: "main"
                          "footer";
 }
 /* ----------Estilos del html Contacto---------- */
 .contenedorContacto{
-    height: 100vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: 1 fr;
-    grid-template-rows: 5fr 5fr 2fr;
+    grid-template-rows: 1fr 1fr 5.5rem;
     grid-template-areas: "contacto"
                          "ubicacion"
                          "footer";
 }
+.mailContacto{
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.consultaContacto{
+    width: 100%;
+    height: 10rem;
+}
 .mapaContacto{
-    width: 100vw;
+    width: 100%;
     padding: 1rem;
 }
+.mailContacto, .consultaContacto, .botonContacto{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+@import "utilities/mq_tablet";
 @import "utilities/mq_desktop";

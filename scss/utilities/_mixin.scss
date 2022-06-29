@@ -1,5 +1,6 @@
-@mixin flex ($display,$justificacion,$alineacion,$texto) {
+@mixin flex ($display,$direccion,$justificacion,$alineacion,$texto) {
     display: $display;
+    flex-direction: $direccion;
     justify-content: $justificacion;
     align-items: $alineacion;
     text-align: $texto;
